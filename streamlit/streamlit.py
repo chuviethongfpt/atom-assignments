@@ -15,21 +15,20 @@ import streamlit.components.v1 as stc
 # Perform query.
 # Uses st.cache to only rerun when the query changes or after 10 min.
 
-st.set_page_config(layout="wide")
-
 st.title("Handpick Files")
 input = st.file_uploader("Upload An Excel File")
+
 #Setup file upload
-#uploaded_file = st.file_uploader(label="Upload An Excel File. (200MB)", type=['csv','xlxs'])
+uploaded_file = st.sidebar.file_uploader(label="Upload An Excel File. (200MB)", type=['csv','xlxs'])
 global df
-if input is not None:
+if uploaded_file is not None:
     print('Upload_file')
 
     try:
-        df= pd.read_csv(input)
+        df= pd.read_csv(uploaded_file)
     except Exception as e:
         print(e)
-        df= pd.read_excel(input)
+        df= pd.read_excel(uploaded_file)
 try:
     st.write(df)
 except Exception as e:
