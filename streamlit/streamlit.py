@@ -16,10 +16,10 @@ import streamlit.components.v1 as stc
 # Uses st.cache to only rerun when the query changes or after 10 min.
 
 st.title("Handpick Files")
-input = st.file_uploader("Upload An Excel File")
+
 
 #Setup file upload
-uploaded_file = st.file_uploader(label="Upload A CSV File.")
+uploaded_file = st.file_uploader(label="Import Master Data")
 #global df
 if uploaded_file is not None:
     try:
