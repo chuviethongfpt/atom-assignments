@@ -31,6 +31,7 @@ st.title("Handpick Files")
 
 #Setup file upload
 uploaded_file = st.file_uploader(label="Import Master Data Here.")
+
 #global df
 if uploaded_file is not None:
     try:
