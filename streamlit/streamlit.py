@@ -15,6 +15,7 @@ import streamlit.components.v1 as stc
 # Perform query.
 # Uses st.cache to only rerun when the query changes or after 10 min.
 
+st.set_page_config(layout="wide")
 st.title("Handpick Files")
 
 
