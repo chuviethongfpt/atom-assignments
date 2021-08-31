@@ -19,8 +19,8 @@ st.title("Handpick Files")
 input = st.file_uploader("Upload An Excel File")
 
 #Setup file upload
-uploaded_file = st.sidebar.file_uploader(label="Upload An Excel File. (200MB)", type=['csv','xlxs'])
-global df
+uploaded_file = st.file_uploader(label="Upload An Excel File. (200MB)", type=['csv','xlxs'])
+#global df
 if uploaded_file is not None:
     try:
         df= pd.read_excel(uploaded_file)
