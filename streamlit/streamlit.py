@@ -8,7 +8,7 @@ import streamlit.components.v1 as stc
 
 # Create API client.
 credentials = service_account.Credentials.from_service_account_info(
-   st.secrets["gcp_service_account"]
+   st.secrets["datawarehouse"]
 )
 client = bigquery.Client(credentials=credentials)
 
