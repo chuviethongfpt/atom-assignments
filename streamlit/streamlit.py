@@ -24,10 +24,10 @@ global df
 if uploaded_file is not None:
     print('Upload_file')
     try:
-        df= pd.read_csv(uploaded_file)
+         df= pd.read_excel(uploaded_file)
     except Exception as e:
         print(e)
-        df= pd.read_excel(uploaded_file)
+        df= pd.read_csv(uploaded_file)
 try:
     st.write(df)
 except Exception as e:
