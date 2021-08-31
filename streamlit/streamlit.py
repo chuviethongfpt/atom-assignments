@@ -7,10 +7,10 @@ from google.cloud import bigquery
 import streamlit.components.v1 as stc
 
 # Create API client.
-#credentials = service_account.Credentials.from_service_account_info(
-   # st.secrets["gcp_service_account"]
+credentials = service_account.Credentials.from_service_account_info(
+   st.secrets["gcp_service_account"]
 )
-#client = bigquery.Client(credentials=credentials)
+client = bigquery.Client(credentials=credentials)
 
 # Perform query.
 # Uses st.cache to only rerun when the query changes or after 10 min.
