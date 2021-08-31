@@ -29,10 +29,8 @@ import streamlit.components.v1 as stc
 st.set_page_config(layout="wide")
 st.title("Handpick Files")
 st.sidebar.subheader("Import Master Data")
-
 #Setup file upload
 uploaded_file = st.sidebar.file_uploader(label="Upload your Excel files.")
-                                        
 #global df
 if uploaded_file is not None:
     try:
