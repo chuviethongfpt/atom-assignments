@@ -31,8 +31,8 @@ st.title("Handpick Files")
 st.sidebar.subheader("Import Master Data")
 
 #Setup file upload
-uploaded_file = st.sidebar.file_uploader(label="Upload your Excel files.",
-                                         type=['csv','xlxs'])
+uploaded_file = st.sidebar.file_uploader(label="Upload your Excel files.")
+                                        
 #global df
 if uploaded_file is not None:
     try:
@@ -44,4 +44,4 @@ try:
     st.write(df)
 except Exception as e:
     print(e)
-    st.write("Please upload file to the application")
+    st.write("File Upload show here")
