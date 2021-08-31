@@ -43,4 +43,4 @@ try:
     st.write(df)
 except Exception as e:
     print(e)
-    st.write("File Upload show here")
+    st.write("Please upload an Excel file")
