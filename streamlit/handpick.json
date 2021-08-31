@@ -1,4 +1,4 @@
-{ "gcp_service_account",
+{ 
   "type": "service_account",
   "project_id": "handpick-datawarehouse-hdw",
   "private_key_id": "6d5b9e5da8bb3ff856e91e8fe48c25deb678fbd8",
