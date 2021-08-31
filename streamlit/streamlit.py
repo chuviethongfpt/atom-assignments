@@ -22,14 +22,14 @@ input = st.file_uploader("Upload An Excel File")
 #Setup file upload
 #uploaded_file = st.file_uploader(label="Upload An Excel File. (200MB)", type=['csv','xlxs'])
 global df
-if uploaded_file is not None:
+if input is not None:
     print('Upload_file')
 
     try:
-        df= pd.read_csv(uploaded_file)
+        df= pd.read_csv(input)
     except Exception as e:
         print(e)
-        df= pd.read_excel(uploaded_file)
+        df= pd.read_excel(input)
 try:
     st.write(df)
 except Exception as e:
