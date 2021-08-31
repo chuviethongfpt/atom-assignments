@@ -18,24 +18,17 @@ import streamlit.components.v1 as stc
 st.title("Handpick Files")
 input = st.file_uploader("Upload An Excel File")
 
-if input is not None:
-    try:
-        df = pd.read_excel(input)
-    except (ValueError, AssertionError):
-        st.warning("Please upload an Excel file")
-
 #Setup file upload
-#uploaded_file = st.file_uploader(label="Upload An Excel File. (200MB)", type=['csv','xlxs'])
-#global df
-#if uploaded_file is not None:
-   # print('Upload_file')
-   # try:
-   #      df= pd.read_excel(uploaded_file)
-   # except Exception as e:
-      #  print(e)
-       # df= pd.read_csv(uploaded_file)
-#try:
-   # st.write(df)
-#except Exception as e:
-   # print(e)
-    #st.write("Please upload file to the application")
+uploaded_file = st.sidebar.file_uploader(label="Upload An Excel File. (200MB)", type=['csv','xlxs'])
+global df
+if uploaded_file is not None:
+    try:
+        df= pd.read_excel(uploaded_file)
+    except Exception as e:
+        print(e)
+        df= pd.read_csv(uploaded_file)
+try:
+    st.write(df)
+except Exception as e:
+    print(e)
+    st.write("Please upload file to the application")
