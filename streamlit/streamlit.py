@@ -1,32 +1,24 @@
-import pandas as pd
-import numpy as np
-import streamlit as st
-import json
 import os
-from google.oauth2 import service_account
-from google.cloud import bigquery
+import streamlit as st
 
-# Create API client.
-credentials = service_account.Credentials.from_service_account_info(
-    st.secrets["g_service_account"]
-)
-client = bigquery.Client(credentials=credentials)
-#Streamlit app
-st.set_page_config(layout="wide")
-st.title("Handpick Files")
 
-#Setup file upload
-uploaded_file = st.file_uploader(label="Import Master Data Here.")
-
-#global df
-if uploaded_file is not None:
-    try:
-        df= pd.read_excel(uploaded_file)
-    except Exception as e:
-        print(e)
-        df= pd.read_csv(uploaded_file)
-try:
-    st.write(df)
-except Exception as e:
-    print(e)
-    st.write("Please upload an Excel file")
+def st_file_selector(st_placeholder, path='.', label='Please, select a file/folder...'):
+    # get base path (directory)
+    base_path = '.' if path is None or path is '' else path
+    base_path = base_path if os.path.isdir(
+        base_path) else os.path.dirname(base_path)
+    base_path = '.' if base_path is None or base_path is '' else base_path
+    # list files in base path directory
+    files = os.listdir(base_path)
+    if base_path is not '.':
+        files.insert(0, '..')
+    files.insert(0, '.')
+    selected_file = st_placeholder.selectbox(
+        label=label, options=files, key=base_path)
+    selected_path = os.path.normpath(os.path.join(base_path, selected_file))
+    if selected_file is '.':
+        return selected_path
+    if os.path.isdir(selected_path):
+        selected_path = st_file_selector(st_placeholder=st_placeholder,
+                                         path=selected_path, label=label)
+    return selected_path
