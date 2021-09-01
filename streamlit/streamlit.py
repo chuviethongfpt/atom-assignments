@@ -6,7 +6,7 @@ import os
 from google.cloud import bigquery
 
 # Define credentials 
-client = bigquery.Client()
+client = bigquery.Client(credentials=credentials)
 
 
 #Streamlit app
