@@ -3,12 +3,14 @@ import numpy as np
 import streamlit as st
 import json
 import os
+from google.oauth2 import service_account
 from google.cloud import bigquery
 
-# Define credentials 
-os.environ['GOOGLE_APPLICATION_CREDENTIALS'] = 'handpick.json'
-client = bigquery.Client()
-
+# Create API client.
+credentials = service_account.Credentials.from_service_account_info(
+    st.secrets["g_service_account"]
+)
+client = bigquery.Client(credentials=credentials)
 #Streamlit app
 st.set_page_config(layout="wide")
 st.title("Handpick Files")
