@@ -6,7 +6,7 @@ import os
 from google.cloud import bigquery
 
 # Define credentials 
-os.environ['GOOGLE_APPLICATION_CREDENTIALS'] = 'handpick.json'
+os.environ['GOOGLE_APPLICATION_CREDENTIALS'] = 'handpick-datawarehouse-hdw-6d5b9e5da8bb.json'
 client = bigquery.Client()
 def _fetch_data_bigquery(query):
     """
