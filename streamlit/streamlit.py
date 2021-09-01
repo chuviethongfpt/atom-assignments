@@ -6,14 +6,8 @@ import os
 from google.cloud import bigquery
 
 # Define credentials 
-os.environ['GOOGLE_APPLICATION_CREDENTIALS'] = 'handpick-datawarehouse-hdw-6d5b9e5da8bb.json'
+os.environ['GOOGLE_APPLICATION_CREDENTIALS'] = 'handpick.json'
 client = bigquery.Client()
-def _fetch_data_bigquery(query):
-    """
-      Take SQL query in Standard SQL and returns a Pandas DataFrame of results
-      ref: https://cloud.google.com/bigquery/docs/reference/standard-sql/enabling-standard-sql
-    """
-    return client.query(query, location="US").to_dataframe()
 
 #Streamlit app
 st.set_page_config(layout="wide")
