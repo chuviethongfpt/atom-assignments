@@ -3,12 +3,13 @@ import numpy as np
 import streamlit as st
 import json
 import os
-from google.cloud import bigquery
+import argparse
 
-# If you don't specify credentials when constructing the client, the
-# client library will look for credentials in the environment.
-client = bigquery.Client()
+from apiclient.discovery import build
+from apiclient.errors import HttpError
+from oauth2client.client import GoogleCredentials
 
+GOOGLE_APPLICATION_CREDENTIALS = './handpick.json'
 #Streamlit app
 st.set_page_config(layout="wide")
 st.title("Handpick Files")
