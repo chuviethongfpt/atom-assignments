@@ -1,8 +1,8 @@
 import pandas as pd
 import numpy as np
 import streamlit as st
-#from google.oauth2 import service_account
-#from google.cloud import bigquery
+from google.oauth2 import service_account
+from google.cloud import bigquery
 
 import streamlit.components.v1 as stc
 
