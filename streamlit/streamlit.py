@@ -7,7 +7,7 @@ from google.cloud import bigquery
 from google.oauth2 import service_account
 
 # Define credentials 
-client = bigquery.Client(credentials=credentials)
+client = bigquery.Client()
 
 
 #Streamlit app
