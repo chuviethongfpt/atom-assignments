@@ -6,7 +6,6 @@ import os
 from google.cloud import bigquery
 
 # Define credentials 
-GOOGLE_APPLICATION_CREDENTIALS = './handpick.json'
 client = bigquery.Client()
 
 
