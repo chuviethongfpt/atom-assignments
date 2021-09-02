@@ -35,6 +35,13 @@ if st.checkbox("Import Product File"):
     project_id="hp-data-324704"
     table_id='DWhandpick.Product'
     product_file.to_gbq(df,table_id,project_id=project_id,if_exits='append')
+    
+    #df=pandas_gbq.read_gbq(product_file,project_id='hp-data-324704',credentials=credentials)
+        project_id="hp-data-324704"
+        table_id=os.environ['DWhandpick.Product']
+        table=client.get_table(table_id)
+        client.insert_rows_from_dataframe(table,df1)
+        df1.to_gbq(destination='DWhandpick.Product',project_id=project_id,if_exits='append')  
 
 if st.checkbox("Import Customer File"):
     product_file = st.file_uploader(label="Customer File is loading...")
