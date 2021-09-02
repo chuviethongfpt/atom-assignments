@@ -31,15 +31,4 @@ except Exception as e:
     print(e)
     st.write("Please upload an Excel file")
 
-#BigQuery
-sql="SELECT * FROM customer.df1"
-df1 = pandas_gbq.read_gbq(sql, project_id="handpick-datawarehouse-hdw", credentials=credentials)
-project_id="handpick-datawarehouse-hdw"
-
-
-# #data_frame1,2,3
-
-
-table_id = uploaded_file
-
-pandas_gbq.to_gbq(df1, table_id, project_id=project_id)
+#Bigquery
