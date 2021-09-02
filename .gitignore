@@ -2,3 +2,4 @@ env_variable.json
 data/datacracy_slack
 .vscode
 .json
+secrets.toml
