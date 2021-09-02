@@ -31,6 +31,10 @@ if st.checkbox("Import Product File"):
     except Exception as e:
         print(e)
         st.write("Please upload an Excel or CSV file")
+    df=pandas_gbq.read_gbq(product_file,project_id='hp-data-324704',credentials=credentials)
+    project_id="hp-data-324704"
+    table_id='DWhandpick.Product'
+    product_file.to_gbq(df,table_id,project_id=project_id,if_exits='append')
 
 if st.checkbox("Import Customer File"):
     product_file = st.file_uploader(label="Customer File is loading...")
