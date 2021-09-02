@@ -2,7 +2,7 @@ import streamlit as st
 import numpy as np
 from google.oauth2 import service_account
 import pandas as pd
-import pandas_gbq
+#import pandas_gbq
 from google.oauth2 import service_account
 from google.cloud import bigquery
 
