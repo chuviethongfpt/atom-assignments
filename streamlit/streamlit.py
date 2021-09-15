@@ -3,7 +3,6 @@ import numpy as np
 from google.oauth2 import service_account
 import pandas as pd
 import pandas_gbq
-from pandas_gbq import gbq
 from googleapiclient.discovery import build
 from google.cloud import bigquery
 import json
