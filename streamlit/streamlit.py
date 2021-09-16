@@ -81,9 +81,9 @@ if st.checkbox("Import Files"):
         try:
             df1= pd.read_excel(product_file)
             #st.write(df1)
-       except Exception as e:
+        except Exception as e:
             print(e)
-            df1= pd.read_csv(product_file, encoding ='unicode_escape')
+            df1= pd.read_csv(product_file)
         try:
             st.write(df1)
         except Exception as e:
