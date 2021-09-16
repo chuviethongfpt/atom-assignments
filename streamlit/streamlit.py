@@ -73,6 +73,7 @@ def push_exit_table(df, db_table):
 
 
 #checkbox
+global df1
 if st.checkbox("Import Files"):
     db_table = st.selectbox("📍 Database Table 📍", ["Customer", "DO", "GO", "Inventory", "Product", "Production", "Return_SO", "SO", "Sup_Product"])
     product_file = st.file_uploader(label="📤 Before selecting the file you want to import, please choosing 'Database Table' first 👆...")
