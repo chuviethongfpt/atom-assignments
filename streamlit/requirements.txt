@@ -12,3 +12,4 @@ yfinance==0.1.54
 lxml==4.5.1
 win-unicode-console == 0.5
 xlrd == 2.0.1
+openpyxl == 1.1.0
