@@ -81,4 +81,4 @@ if st.checkbox("Import Files"):
         print('Process: ', product_file, db_table)
         df1= pd.read_excel(product_file, engine = 'openpyxl')
         st.dataframe(df1)
-    push_exit_table(df1, db_table)
+        push_exit_table(df1, db_table)
