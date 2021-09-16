@@ -14,10 +14,10 @@ import streamlit.components.v1 as stc
 import codecs
 import sys
 
-#credentials = service_account.Credentials.from_service_account_info(
-    #st.secrets["gcp_service_account"]
-#)
-#client = bigquery.Client(credentials=credentials)
+credentials = service_account.Credentials.from_service_account_info(
+    st.secrets["gcp_service_account"]
+)
+client = bigquery.Client(credentials=credentials)
 
 #Streamlit app
 st.set_page_config(layout="wide")
