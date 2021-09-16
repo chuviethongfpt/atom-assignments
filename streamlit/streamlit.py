@@ -79,11 +79,11 @@ if st.checkbox("Import Files"):
     if product_file is not None:
         print('Process: ', product_file, db_table)
         try:
-            df1= pd.read_excel(product_file)
+            df1= pd.read_excel(product_file, encoding=('ISO-8859-1'), low_memory=False)
             #st.write(df1)
         except Exception as e:
             print(e)
-            df1= pd.read_csv(product_file)
+            df1= pd.read_csv(product_file, encoding=('ISO-8859-1'), low_memory=False)
         try:
             st.write(df1)
         except Exception as e:
