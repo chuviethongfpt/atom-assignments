@@ -62,7 +62,7 @@ def push_exit_table(df, db_table):
     normalize_db_table_column(df)
     print(df)
     credentials = service_account.Credentials.from_service_account_info(
-        str.secrets["gcp_service_account"]
+        st.secrets["gcp_service_account"]
     )
     client = bigquery.Client(credentials=credentials)
 
