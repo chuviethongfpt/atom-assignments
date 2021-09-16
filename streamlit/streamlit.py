@@ -85,9 +85,12 @@ if st.checkbox("Import Files"):
             #print(e)
             #df1= pd.read_csv(product_file, encoding='cp1258',engine='python')
         #try:
-        st.write(df)
+        #st.write(df)
        # except Exception as e:
             #print(e)
-    else:
-        st.write('Error')
+    try:
+        st.write(df)
+    except Exception as e:
+        print(e)
+        str.write('Please Upload Excel File.')
     push_exit_table(df, db_table)
