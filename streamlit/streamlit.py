@@ -11,6 +11,7 @@ import os
 from PIL import Image
 import streamlit.components.v1 as components
 import streamlit.components.v1 as stc 
+import codecs
 
 #credentials = service_account.Credentials.from_service_account_info(
     #st.secrets["gcp_service_account"]
