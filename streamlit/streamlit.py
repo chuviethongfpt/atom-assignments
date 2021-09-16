@@ -88,4 +88,4 @@ if st.checkbox("Import Files"):
         st.write(df1)
     except Exception as e:
         print(e)
-     push_exit_table(df1, db_table)
+    push_exit_table(df1, db_table)
