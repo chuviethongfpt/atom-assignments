@@ -12,6 +12,7 @@ from PIL import Image
 import streamlit.components.v1 as components
 import streamlit.components.v1 as stc 
 import codecs
+import sys
 
 #credentials = service_account.Credentials.from_service_account_info(
     #st.secrets["gcp_service_account"]
@@ -82,7 +83,7 @@ if st.checkbox("Import Files"):
             #st.write(df1)
         except Exception as e:
             print(e)
-            df1= pd.read_csv(product_file, encoding ='unicode_escape')
+            df1= pd.read_csv(product_file, header=None, delim_whitespace=True, encoding ='unicode_escape')
         try:
             st.write(df1)
         except Exception as e:
