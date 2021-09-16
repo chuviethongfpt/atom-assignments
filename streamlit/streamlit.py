@@ -76,9 +76,9 @@ def push_exit_table(df, db_table):
 
 if st.checkbox("Import Files"):
     db_table = st.selectbox("📍 Database Table 📍", ["Customer", "DO", "GO", "Inventory", "Product", "Production", "Return_SO", "SO", "Sup_Product"])
-    product_file = st.file_uploader(label="📤 Before selecting the file you want to import, please choosing 'Database Table' first 👆...")
+    product_file = st.file_uploader(label="📤 Before selecting the file you want to import, please choosing 'Database Table' first 👆...", type = xlxs)
     if product_file:
         print('Process: ', product_file, db_table)
-        df1= pd.read_excel(product_file)
+        df1= pd.read_excel(product_file, engine = 'openpyxl')
         st.dataframe(df1)
     push_exit_table(df1, db_table)
