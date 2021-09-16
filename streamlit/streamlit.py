@@ -79,13 +79,13 @@ if st.checkbox("Import Files"):
     if product_file is not None:
         print('Process: ', product_file, db_table)
         try:
-            df1= pd.read_excel(product_file, header=None, delim_whitespace=True)
-            st.write(df1)
-       #except Exception as e:
-            #print(e)
-            #df1= pd.read_csv(product_file, encoding ='unicode_escape')
-        #try:
+            df1= pd.read_excel(product_file)
             #st.write(df1)
+       except Exception as e:
+            print(e)
+            df1= pd.read_csv(product_file, encoding ='unicode_escape')
+        try:
+            st.write(df1)
         except Exception as e:
             print(e)
-        push_exit_table(df1, db_table)
+            push_exit_table(df1, db_table)
