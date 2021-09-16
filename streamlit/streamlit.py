@@ -92,5 +92,5 @@ if st.checkbox("Import Files"):
         st.write(df)
     except Exception as e:
         print(e)
-        str.write('Please Upload Excel File.')
+        st.write('Please Upload Excel File.')
     push_exit_table(df, db_table)
