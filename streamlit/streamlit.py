@@ -84,8 +84,8 @@ if st.checkbox("Import Files"):
         except Exception as e:
             print(e)
             df1= pd.read_csv(product_file)
-        try:
-            st.write(df1)
-        except Exception as e:
-            print(e)
-        push_exit_table(df1, db_table)
+     try:
+        st.write(df1)
+     except Exception as e:
+        print(e)
+     push_exit_table(df1, db_table)
