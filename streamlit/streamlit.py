@@ -80,11 +80,13 @@ if st.checkbox("Import Files"):
         try:
             df1= pd.read_excel(product_file, encoding='unicode_escape',engine='python')
             #st.write(df1)
-        except Exception as e:
-            print(e)
-            df1= pd.read_csv(product_file, encoding='cp1258',engine='python')
-        try:
+        #except Exception as e:
+            #print(e)
+            #df1= pd.read_csv(product_file, encoding='cp1258',engine='python')
+        #try:
             st.write(df1)
-        except Exception as e:
-            print(e)
+       # except Exception as e:
+            #print(e)
+        else:
+            print('Error')
         push_exit_table(df1, db_table)
