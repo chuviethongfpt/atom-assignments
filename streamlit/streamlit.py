@@ -87,6 +87,6 @@ if st.checkbox("Import Files"):
             st.write(df1)
        # except Exception as e:
             #print(e)
-     else:
-            print('Error')
+    else:
+        print('Error')
         push_exit_table(df1, db_table)
