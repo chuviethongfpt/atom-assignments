@@ -77,16 +77,8 @@ def push_exit_table(df, db_table):
 if st.checkbox("Import Files"):
     db_table = st.selectbox("📍 Database Table 📍", ["Customer", "DO", "GO", "Inventory", "Product", "Production", "Return_SO", "SO", "Sup_Product"])
     product_file = st.file_uploader(label="📤 Before selecting the file you want to import, please choosing 'Database Table' first 👆...")
-    if product_file is not None:
+    if product_file:
         print('Process: ', product_file, db_table)
-        try:
-            product_file= pd.read_excel(product_file)
-            #st.write(df1)
-        except Exception as e:
-            print(e)
-            product_file= pd.read_csv(product_file)
-    try:
-        st.write(product_file)
-    except Exception as e:
-        print(e)
-    push_exit_table(product_file, db_table)
+        df1= pd.read_excel(product_file)
+        st.dataframe(df1)
+    push_exit_table(df1, db_table)
