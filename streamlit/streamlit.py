@@ -19,20 +19,7 @@ import sys
 #     st.secrets['gcp_service_account']
 # )
 # client = bigquery.Client(credentials=credentials)
-#Setup push BigQuery
-def push_exit_table(df, db_table):
-    normalize_db_table_column(df)
-    print(df)
-    credentials = service_account.Credentials.from_service_account_info(
-        st.secrets["gcp_service_account"]
-    )
-    client = bigquery.Client(credentials=credentials)
 
-    project_id="hp-data-324704"
-
-    pandas_gbq.to_gbq(df,f'DWhandpick.{db_table}', project_id=project_id, if_exists='append')
-
-    st.write("Please upload an Excel or CSV file")
 
 #Streamlit app
 st.set_page_config(layout="wide")
@@ -70,7 +57,20 @@ def normalize_db_table_column(df):
     df.columns = df.columns.str.lower()
     df.columns = df.columns.to_series().apply(remove_accents)
 
+#Setup push BigQuery
+def push_exit_table(df, db_table):
+    normalize_db_table_column(df)
+    print(df)
+    credentials = service_account.Credentials.from_service_account_info(
+        str.secrets["gcp_service_account"]
+    )
+    client = bigquery.Client(credentials=credentials)
 
+    project_id="hp-data-324704"
+
+    pandas_gbq.to_gbq(df,f'DWhandpick.{db_table}', project_id=project_id, if_exists='append')
+
+    st.write("Please upload an Excel or CSV file")
 
 
 
