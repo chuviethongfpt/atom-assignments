@@ -75,7 +75,7 @@ def push_exit_table(df, db_table):
 if st.checkbox("Import Files"):
     db_table = st.selectbox("📍 Database Table 📍", ["Customer", "DO", "GO", "Inventory", "Product", "Production", "Return_SO", "SO", "Sup_Product"])
     product_file = st.file_uploader(label="📤 Before selecting the file you want to import, please choosing 'Database Table' first 👆...")
-    product_file=product_file.decode('utf-16')
+    product_file=product_file.encoding('utf-16')
     if product_file is not None:
         print('Process: ', product_file, db_table)
         try:
