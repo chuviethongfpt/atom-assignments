@@ -63,8 +63,9 @@ def normalize_db_table_column(df):
 def push_exit_table(df, db_table):
     normalize_db_table_column(df)
     print(df)
-    credentials == st.secrets["gcp_service_account"]
-    
+    credentials = service_account.Credentials.from_service_account_info(
+                st.secrets["gcp_service_account"]
+    )
     client = bigquery.Client(credentials=credentials)
 
     project_id="hp-data-324704"
