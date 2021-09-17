@@ -1,7 +1,7 @@
 streamlit==0.71.0
 pandas==0.25.3
 plotly==4.14.3
-google-cloud-bigquery == 2.25.1
+google-cloud-bigquery == 2.26.0
 pandas_gbq == 0.15.0
 google_api_python_client == 2.21.0
 google-auth-oauthlib == 0.4.6
