@@ -75,7 +75,7 @@ def normalize_db_table_column(df):
 def push_exit_table(df, db_table):
     normalize_db_table_column(df)
     print(df)
-    credentials = service_account.Credentials.from_service_account_info(
+    credentials = google.oauth2.credentials.Credentials(
                 ["gcp_service_account"],
                 type = "service_account",
                 project_id = "hp-data-324704",
