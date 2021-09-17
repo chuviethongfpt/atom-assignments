@@ -75,10 +75,9 @@ def normalize_db_table_column(df):
 def push_exit_table(df, db_table):
     normalize_db_table_column(df)
     print(df)
-    json_acct_info = json.loads(function_to_get_json_creds())
     credentials = service_account.Credentials.from_service_account_info(
                 ["gcp_service_account"],
-                require=["client_email", "token_uri"]
+                require=["datawarehouse@hp-data-324704.iam.gserviceaccount.com", "https://oauth2.googleapis.com/token"]
     )
     client = bigquery.Client(credentials=credentials)
 
