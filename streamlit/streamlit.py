@@ -14,6 +14,7 @@ import streamlit.components.v1 as stc
 import codecs
 import sys
 from apiclient.discovery import build
+import google.oauth2.credentials
 #from oauth2client.service_account import ServiceAccountCredentials
 
 # Create API client.
