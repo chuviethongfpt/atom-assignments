@@ -22,17 +22,17 @@ from apiclient.discovery import build
 # )
 # client = bigquery.Client(credentials=credentials)
     
-my_db.connect(type=st.secrets.db_credentials.service_account, 
-              project_id=st.secrets.db_credentials.hp-data-324704, 
-              private_key_id=st.secrets.db_credentials.dd1c1b3c55df0fb1aefcef6970339a7992d48f98, 
-              client_email=st.secrets.db_credentials.datawarehouse@hp-data-324704.iam.gserviceaccount.com, 
-              client_id=st.secrets.db_credentials.105542999787496052690, 
-              auth_uri=st.secrets.db_credentials.https://accounts.google.com/o/oauth2/auth, 
-              token_uri=st.secrets.db_credentials.https://oauth2.googleapis.com/token, 
-              auth_provider_x509_cert_url=st.secrets.db_credentials.https://www.googleapis.com/oauth2/v1/certs, 
-              client_x509_cert_url=st.secrets.db_credentials.https://www.googleapis.com/robot/v1/metadata/x509/datawarehouse%40hp-data-324704.iam.gserviceaccount.com, 
-              private_key=st.secrets.db_credentials.\MIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQDeT7/M4JBjdv8f\nHL0e/Sgo8aZoEpe12iVL/UJDQH5eWpXv6KE0c/SdAW9FJMTFGBwMoBqul9eZUi+M\nEokuUFB7oZjjKRcPrWk99T/h3L+2C7mb0LkQWxH+RadN3AkwwXaWLfooYrJQfO+F\nWrtFR1/SXYor76oOXwqeHn420UApEu8/FmgSVmiduVppZA37bTzcKiHltN259+pd\nxE+Ocr/rdlWPfgll9AxMWD9YUGNkJ34dRRmkCyGhz7sKdPSwiU2AXTcNDeSdceUC\nrZ6RMtOmsRriodM46Ey48iQiovMO56q4muX0HOxXokdptpiDOF29ANTpXJhgjlR3\niCU/nUgxAgMBAAECggEAR98Jd49sLrPkY+cTH0ch6ibBsSi9ol2drDT67KoXkKKB\nkden8kDApte1ZOmvsbaLLuu95I8TdS50T7kYX4A4nNeQCXSZz4g1G4JDvl3zHsQo\no/61Ldv7c7SKE6pc0EXjdEb19oN9+XaCqx67p3idOnHiPzUSyeWhFaBvFoLM1tn9\nM8Wc/hqcaiDNbQ3fXt3xX8upraD9X2CKJXck/WlWbWBJbf6SlLQRt4cXkYfwyBkt\ncNnnhP+YihbXVu1BMS9G+apZCXxEi57oNRuh7bZyuO6Uwv9iiCcnLbf7O+pCmjfF\noA/prGODdt/Xk+R1SK5GkGwJUTFjopCk6PIe0eTi/wKBgQD9lVbJFfebXuS10hEP\ns9dBjgskEb2YQbvWZ83AmHVKzBw7OYq5/3lScbVkoPE3fmlUKLfgMIl46a0VqtUP\nnUz5PhWgM8LXjzKhdBDQs7K3qJG3t12YvQ2gtbstIafs7JLUeclce2sMkeOcffXy\n70EipiPViLd9M5jNgQA1smHp9wKBgQDgbh36FHY2J91zU3iERdFpvLmFrmGGlA5Q\nmnCir2AbmZU8yS6fafm6JJJljlCjbI4M7rrOvSeQkenaRJUlWvPIhj2HLgAlAsBI\nr5shWg+3w1AdOM8wperh/LAsB5DOPw8tNLFdPtppuhG9/AJcpVDNW9wWpuDqxfaz\nE1LOLGAVFwKBgEWT+lIGYwAQk3SIBQJn+AIWtVvaOklSj/WOWdgkfNpfEsf1S+ko\n/eLvLDRGLKlrV/8thPZQmwfAJiuxyfAU2w/wRwLD8QwwUFYYgJyjEcBu0jy0ZUwJ\nY3nbI1aIy4ioiMkf+W4UtxSl2uwPa7KSjy6wo1htwNrrk1ufr60MGu2VAoGBANMK\nWX//W8XDKPe4hzyC1tBCWoZ9m1HMycU75SzmE08A1hgp6oCXS/ChUVTURbnXa6B3\noQylTJ4ix6+rDEDrTRDEQvlp5VLoSl5PW2Y6ZUtdC2nfMN3DN6M4VYWhu6ZmH+RX\nh21ynDoNcX+giawK/HePqN9YH2pFq51rT1N24QcTAoGBAM38vkwyEDgBPL627x8Z\nYNJzp8lsF4HZmIYyIbVfeYyUkzf30wKrwXklqx5zE4EAYaL+bcaaHCbsiFXJ9PDc\nSrL5dfFFPRAGh8jXMFWCGnYMgv6VCG6NIMjFJDE+Ol9F8rGvexc9POgU3Hy/MSLg\nbqZRyMD1YLTYx7YrZGlsSUzN\)
-my_db.connect(**st.secrets.db_credentials)
+# my_db.connect(type=st.secrets.db_credentials.service_account, 
+#               project_id=st.secrets.db_credentials.hp-data-324704, 
+#               private_key_id=st.secrets.db_credentials.dd1c1b3c55df0fb1aefcef6970339a7992d48f98, 
+#               client_email=st.secrets.db_credentials.datawarehouse@hp-data-324704.iam.gserviceaccount.com, 
+#               client_id=st.secrets.db_credentials.105542999787496052690, 
+#               auth_uri=st.secrets.db_credentials.https://accounts.google.com/o/oauth2/auth, 
+#               token_uri=st.secrets.db_credentials.https://oauth2.googleapis.com/token, 
+#               auth_provider_x509_cert_url=st.secrets.db_credentials.https://www.googleapis.com/oauth2/v1/certs, 
+#               client_x509_cert_url=st.secrets.db_credentials.https://www.googleapis.com/robot/v1/metadata/x509/datawarehouse%40hp-data-324704.iam.gserviceaccount.com, 
+#               private_key=st.secrets.db_credentials.\MIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQDeT7/M4JBjdv8f\nHL0e/Sgo8aZoEpe12iVL/UJDQH5eWpXv6KE0c/SdAW9FJMTFGBwMoBqul9eZUi+M\nEokuUFB7oZjjKRcPrWk99T/h3L+2C7mb0LkQWxH+RadN3AkwwXaWLfooYrJQfO+F\nWrtFR1/SXYor76oOXwqeHn420UApEu8/FmgSVmiduVppZA37bTzcKiHltN259+pd\nxE+Ocr/rdlWPfgll9AxMWD9YUGNkJ34dRRmkCyGhz7sKdPSwiU2AXTcNDeSdceUC\nrZ6RMtOmsRriodM46Ey48iQiovMO56q4muX0HOxXokdptpiDOF29ANTpXJhgjlR3\niCU/nUgxAgMBAAECggEAR98Jd49sLrPkY+cTH0ch6ibBsSi9ol2drDT67KoXkKKB\nkden8kDApte1ZOmvsbaLLuu95I8TdS50T7kYX4A4nNeQCXSZz4g1G4JDvl3zHsQo\no/61Ldv7c7SKE6pc0EXjdEb19oN9+XaCqx67p3idOnHiPzUSyeWhFaBvFoLM1tn9\nM8Wc/hqcaiDNbQ3fXt3xX8upraD9X2CKJXck/WlWbWBJbf6SlLQRt4cXkYfwyBkt\ncNnnhP+YihbXVu1BMS9G+apZCXxEi57oNRuh7bZyuO6Uwv9iiCcnLbf7O+pCmjfF\noA/prGODdt/Xk+R1SK5GkGwJUTFjopCk6PIe0eTi/wKBgQD9lVbJFfebXuS10hEP\ns9dBjgskEb2YQbvWZ83AmHVKzBw7OYq5/3lScbVkoPE3fmlUKLfgMIl46a0VqtUP\nnUz5PhWgM8LXjzKhdBDQs7K3qJG3t12YvQ2gtbstIafs7JLUeclce2sMkeOcffXy\n70EipiPViLd9M5jNgQA1smHp9wKBgQDgbh36FHY2J91zU3iERdFpvLmFrmGGlA5Q\nmnCir2AbmZU8yS6fafm6JJJljlCjbI4M7rrOvSeQkenaRJUlWvPIhj2HLgAlAsBI\nr5shWg+3w1AdOM8wperh/LAsB5DOPw8tNLFdPtppuhG9/AJcpVDNW9wWpuDqxfaz\nE1LOLGAVFwKBgEWT+lIGYwAQk3SIBQJn+AIWtVvaOklSj/WOWdgkfNpfEsf1S+ko\n/eLvLDRGLKlrV/8thPZQmwfAJiuxyfAU2w/wRwLD8QwwUFYYgJyjEcBu0jy0ZUwJ\nY3nbI1aIy4ioiMkf+W4UtxSl2uwPa7KSjy6wo1htwNrrk1ufr60MGu2VAoGBANMK\nWX//W8XDKPe4hzyC1tBCWoZ9m1HMycU75SzmE08A1hgp6oCXS/ChUVTURbnXa6B3\noQylTJ4ix6+rDEDrTRDEQvlp5VLoSl5PW2Y6ZUtdC2nfMN3DN6M4VYWhu6ZmH+RX\nh21ynDoNcX+giawK/HePqN9YH2pFq51rT1N24QcTAoGBAM38vkwyEDgBPL627x8Z\nYNJzp8lsF4HZmIYyIbVfeYyUkzf30wKrwXklqx5zE4EAYaL+bcaaHCbsiFXJ9PDc\nSrL5dfFFPRAGh8jXMFWCGnYMgv6VCG6NIMjFJDE+Ol9F8rGvexc9POgU3Hy/MSLg\nbqZRyMD1YLTYx7YrZGlsSUzN\)
+# my_db.connect(**st.secrets.db_credentials)
 #Streamlit app
 st.set_page_config(layout="wide")
 
@@ -74,7 +74,7 @@ def push_exit_table(df, db_table):
     normalize_db_table_column(df)
     print(df)
     credentials = service_account.Credentials.from_service_account_info(
-                my_db.connect
+                st.secrets.db_credentials["gcp_service_account"]
     )
     client = bigquery.Client(credentials=credentials)
 
