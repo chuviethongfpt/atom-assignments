@@ -14,7 +14,7 @@ import streamlit.components.v1 as stc
 import codecs
 import sys
 from apiclient.discovery import build
-from oauth2client.service_account import ServiceAccountCredentials
+#from oauth2client.service_account import ServiceAccountCredentials
 
 # Create API client.
 # credentials = service_account.Credentials.from_service_account_info(
