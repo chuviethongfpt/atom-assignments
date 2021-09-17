@@ -77,7 +77,9 @@ def push_exit_table(df, db_table):
     print(df)
     credentials = service_account.Credentials.from_service_account_info(
                 ["gcp_service_account"],
-                require=["datawarehouse@hp-data-324704.iam.gserviceaccount.com", "https://oauth2.googleapis.com/token"]
+                token_uri='https://oauth2.googleapis.com/token',
+                client_id='105542999787496052690',
+                client_email='datawarehouse@hp-data-324704.iam.gserviceaccount.com']
     )
     client = bigquery.Client(credentials=credentials)
 
