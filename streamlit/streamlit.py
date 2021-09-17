@@ -79,7 +79,7 @@ def push_exit_table(df, db_table):
                 ["gcp_service_account"],
                 token_uri='https://oauth2.googleapis.com/token',
                 client_id='105542999787496052690',
-                client_email='datawarehouse@hp-data-324704.iam.gserviceaccount.com']
+                client_email='datawarehouse@hp-data-324704.iam.gserviceaccount.com'
     )
     client = bigquery.Client(credentials=credentials)
 
