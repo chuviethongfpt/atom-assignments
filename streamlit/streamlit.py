@@ -95,8 +95,7 @@ def push_exit_table(df, db_table):
                 client_email= client_email,
                 client_id= client_id,
                 auth_uri= auth_uri,
-                token_uri= token_uri
-                
+                token_uri= token_uri  
       )
     client = bigquery.Client(credentials=credentials)
 
