@@ -13,6 +13,8 @@ import streamlit.components.v1 as components
 import streamlit.components.v1 as stc 
 import codecs
 import sys
+from apiclient.discovery import build
+from oauth2client.service_account import ServiceAccountCredentials
 
 # Create API client.
 # credentials = service_account.Credentials.from_service_account_info(
@@ -61,9 +63,8 @@ def normalize_db_table_column(df):
 def push_exit_table(df, db_table):
     normalize_db_table_column(df)
     print(df)
-    credentials = service_account.Credentials.from_service_account_info(
-        st.secrets["gcp_service_account"]
-    )
+    credentials = st.secrets["gcp_service_account"]
+    
     client = bigquery.Client(credentials=credentials)
 
     project_id="hp-data-324704"
